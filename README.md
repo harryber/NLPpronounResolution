@@ -16,9 +16,9 @@ The algorithm has a set of assumptions that it makes about sentence structures:
 *Notes*: 2 and 3 make up the property that is known as the **gender agreement**.
 
 ## How we should go about it
--- Find the syntactice parse tree of the sentences.
--- Identify all 'S' or noun-classified (N) phrases.
--- contd
+1. Find the syntactice parse tree of the sentences.
+2. Identify all 'S' or noun-classified (N) phrases.
+3. to be continued
 
 ### References
 [Hobbs Algorithm](https://medium.com/analytics-vidhya/hobbs-algorithm-pronoun-resolution-7620aa1af538)
