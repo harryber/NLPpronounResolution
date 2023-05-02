@@ -14,11 +14,13 @@ The algorithm has a set of assumptions that it makes about sentence structures:
 4. Pronouns generally only refer to something within a certain context, i.e. the previous three sentences, the previous paragraph, etc.
 
 *Notes*: 2 and 3 make up the property that is known as the **gender agreement**.
-
+<!-- 
 ## How we should go about it
 1. Find the syntactice parse tree of the sentences.
 2. Identify all 'S' or noun-classified (N) phrases.
 3. to be continued
+
+## General questions -->
 
 ### References
 [Hobbs Algorithm](https://medium.com/analytics-vidhya/hobbs-algorithm-pronoun-resolution-7620aa1af538)
