@@ -4,28 +4,53 @@ import sys
 
 from nltk import Tree
 
-NOM_LABELS = ['NN', 'NNS', 'NNP', 'NNPS', 'PRP']
 PLURALITY = {
-        "NN":          0,
-        "NNP":         0,
-        "he":          0,
-        "she":         0,
-        "him":         0,
-        "her":         0,
-        "it":          0,
-        "himself":     0,
-        "herself":     0,
-        "itself":      0,
-        "NNS":         1,
-        "NNPS":        1,
-        "they":        1,
-        "them":        1,
-        "themselves":  1,
-    }
+    "NN":          0,
+    "NNP":         0,
+    "he":          0,
+    "she":         0,
+    "him":         0,
+    "her":         0,
+    "it":          0,
+    "himself":     0,
+    "herself":     0,
+    "itself":      0,
+    "NNS":         1,
+    "NNPS":        1,
+    "they":        1,
+    "them":        1,
+    "themselves":  1,
+}
+
+REFLEXIVE = {
+    'herself', 
+    'himself', 
+    'themself', 
+    'themselves', 
+    'itself', 
+    'myself', 
+    'yourself', 
+    'yourselves'
+}
 
 def is_np_or_s(tree: Tree):
     ''' Checks if a node is represents an NP or S '''
     return tree.label() == 'NP' or tree.label() == 'S'
+
+def is_np(tree: Tree):
+    ''' Checks if a node is represents an NP '''
+    return tree.label() == 'NP'
+
+def is_reflexive(pn: str):
+    return pn in REFLEXIVE
+
+def is_nominal(tree: Tree):
+    ''' Checks if a node has a nominal label '''
+    return tree.label() in {'NN', 'NNS', 'NNP', 'NNPS', 'PRP'}
+
+def is_left_of_path(pos: tuple, path: 'list[tuple]'):
+    ''' Checks if a position is left of a path '''
+    return any([pos < p for p in path])
 
 def climb_to_node(tree: Tree, pos: tuple) -> 'tuple[tuple, list[tuple]]':
     ''' 
@@ -62,7 +87,6 @@ def bfs(tree: Tree, pos: tuple = (), dir: int = -1) -> queue.Queue:
 
     while not q.empty():
         p = q.get()
-        # visited.append(node)
         i = 0
         for child in tree[p]:
             if isinstance(child, Tree):
@@ -82,7 +106,7 @@ def propose(tree: Tree, pos: tuple, pn: str) -> bool:
 def _check_plurality(tree, pos, pn) -> bool:
     ''' Checks whether a proposed antecedent matches the plurality of the pronoun '''
     for c in tree[pos]:
-        if isinstance(c, Tree) and c.label() in NOM_LABELS:
+        if isinstance(c, Tree) and is_nominal(c):
             if PLURALITY.get(c.label(), -1) == PLURALITY.get(pn, -2):
                 return True
     return False
@@ -92,25 +116,45 @@ def _check_gender(tree, pos, pn) -> bool:
     with open('names.json', 'rb') as f:
         names = json.load(f)
 
-    pns_m = ['he', 'him', 'himself']
-    pns_f = ['she', 'her', 'herself']
-    # pns_n = ['they', 'them', 'themself', 'themselves' 'it', 'itself']
+    male = ['he', 'him', 'himself']
+    female = ['she', 'her', 'herself']
+    inanimate = ['it', 'itself']
 
     for c in tree[pos]:
-        if isinstance(c, Tree) and c.label() in NOM_LABELS:
+        if isinstance(c, Tree) and is_nominal(c):
             c_leaf = c.leaves()[0]
 
-            # check male name <-> male pronoun
-            if c_leaf.lower() in names['male']:
-                if pn in pns_m:
-                    return True
+            # check male name <-> female pronoun
+            if c_leaf.lower() in names['male'] and c_leaf.lower() not in names['female']:
+                if pn in female or pn in inanimate:
+                    return False
                 
-            # check female name <-> female pronoun
-            if c_leaf.lower() in names['female']:
-                if pn in pns_f:
-                    return True
+            # check female name <-> male pronoun
+            if c_leaf.lower() in names['female'] and c_leaf.lower() not in names['male']:
+                if pn in male or pn in inanimate:
+                    return False
                 
-    return False
+    return True
+
+def resolve_reflexive(tree: 'list[Tree]', pos: tuple, pn: str):
+    ''' Resolves reflexive pronouns '''
+    x, path = climb_to_node(tree, pos) # get dominating NP
+
+    # climb to first S
+    while is_np(tree[x]):
+        x, new_path = climb_to_node(tree, x)
+        path = path + new_path
+
+    # search to left of path
+    nodes = bfs(tree, x, 0)
+    while not nodes.empty():
+        node_p = nodes.get()
+        
+        if is_left_of_path(node_p, path):
+            if is_np(tree[node_p]) and propose(tree, node_p, pn):
+                return tree, node_p
+            
+    return None, None
 
 def hobbs(trees: 'list[Tree]', pos: tuple):
     ''' 
@@ -120,6 +164,9 @@ def hobbs(trees: 'list[Tree]', pos: tuple):
 
     tree = trees[-1] # start with last tree
     pn = tree[pos].leaves()[0].lower() # pronoun we are trying to resolve
+
+    if is_reflexive(pn):
+        return resolve_reflexive(tree, pos, pn)
 
     ### START AT NP OVER PRONOUN ###
 
@@ -131,57 +178,137 @@ def hobbs(trees: 'list[Tree]', pos: tuple):
 
     ### BFS ALL BRANCHES BELOW X TO LEFT, PROPOSE ANY NP/S ###
 
-    visited = bfs(tree, cur, 0) # in-order list of node positions
+    nodes = bfs(tree, cur, 0) # in-order list of node positions
 
     # check each node
-    while not visited.empty():
-        node_p = visited.get()
+    while not nodes.empty():
+        node_p = nodes.get()
         if node_p not in path and node_p != pos:
             if is_np_or_s(tree[node_p]):
                 if propose(tree, node_p, pn):
                     return tree, node_p
 
-    ### IF X IS HIGHEST S, TRAVERSE PREVIOUS SENTENCES L->R, BF, PROPOSE ANY NP ###
+    ### IF X IS HIGHEST S, TRAVERSE PREVIOUS SENTENCES L->R, BF, PROPOSE ANY NP, SEE ELSE CASE ###
 
-    ### IF X NOT HIGHEST S, GO UP TO FIRST NP OR S, CALL THIS Y ###
+    if cur != ():
 
-    ### IF Y IS NP & PATH P DIDN'T PASS THRU NOMINAL NODE Y IMMEDIATELY DOMINATES, PROPOSE Y ###
+        ### IF X NOT HIGHEST S, GO UP TO FIRST NP OR S, CALL THIS Y ###
 
-    ### BFS ALL BRANCHES BELOW Y TO THE LEFT OF PATH P, PROPOSE ANY NP ###
+        cur, path = climb_to_node(tree, cur)
 
-    ### IF Y IS S, TRAVERSE LEFT DOWN TO ANY NP OR S, PROPOSE ANY NP ###
+        ### IF Y IS NP & PATH P DIDN'T PASS THRU NOMINAL NODE Y IMMEDIATELY DOMINATES, PROPOSE Y ###
+
+        if is_np(tree[cur]) and not is_nominal(tree[cur]):
+            for cp in [cur + (i,) for i in range(len(tree[cur]))]:
+                if isinstance(tree[cp], Tree) and is_nominal(tree[cp]):
+                    if cp not in path:
+                        if propose(tree, cur, pn):
+                            return tree, cur
+
+        ### BFS ALL BRANCHES BELOW Y TO THE LEFT OF PATH P, PROPOSE ANY NP ###
+
+        nodes = bfs(tree, cur, 0)
+        while not nodes.empty():
+            node_p = nodes.get()
+            
+            if is_left_of_path(node_p, path):
+                if is_np(tree[node_p]) and propose(tree, node_p, pn):
+                    return tree, node_p
+
+        ### IF Y IS S, TRAVERSE RIGHT DOWN TO ANY NP OR S, PROPOSE ANY NP ###
+
+        if not is_np(cur):
+            for n in nodes:
+                if is_np(tree[n]) and propose(tree, n, pn):
+                    return tree, n
+                elif is_np_or_s:
+                    break
 
     ### TRAVERSE PREVIOUS SENTENCES L->R, BF, PROPOSE ANY NP ###
 
+    for t in reversed(trees[:-1]):
+        nq = bfs(t) # get L->R ordered BFS list of nodes
+
+        while not nq.empty():
+            node_p = nq.get()
+            if is_np_or_s(t[node_p]) and propose(t, node_p, pn):
+                return t, node_p
+                
+        return None, None
+
     return None, None
+
+def pretty_print(tts, tp, t, p):
+    ''' 
+    Takes a list of test sentences, pronoun position, antecedent tree, and antecedent position
+    and prints the sentences with pronoun and antecedent highlighted by angled brackets.
+    '''
+    for i, tt in enumerate(tts):
+        if tt == t:
+            # add '<' to front of first word in antecedent
+            f = tt[p].leaf_treeposition(0)
+            tt[p][f] = f'<{tt[p][f]}'
+
+            # add '>' to end of last word in antecedent
+            l = tt[p].leaf_treeposition(len(tt[p].leaves())-1)
+            tt[p][l] = f'{tt[p][l]}>'
+        if i == len(tts)-1:
+            # add brackets around pronoun
+            x = tt[tp].leaf_treeposition(0)
+            tt[tp] = f'<{tt[tp][x]}>'
+
+    s = '. '.join([' '.join(tt.leaves()) for tt in tts] + [''])
+    if t:
+        print(f'[+] {s}')
+    else:
+        print(f'[?] {s}')
+
+def main(tests):
+    ''' Takes a list of tests and runs Hobbs' algorithm on them '''
+    for (tts,tp) in tests:
+        t, p = hobbs(tts, tp)
+        pretty_print(tts, tp, t, p)
 
 if __name__ == '__main__':
     assert len(sys.argv) == 3, f'expected 2 arguments, received {len(sys.argv)-1}'
 
-    arg1, arg2 = sys.argv[1:3] # to be implemented (input files)
+    trees_path, pos_path = sys.argv[1:3]
+
+    # with open(trees_path, 'r') as f:
+    #     trees = f.readlines()
+
+    # with open(pos_path, 'r') as f:
+    #     pos_strs = f.readlines()
+
+    # pos = [tuple([int(x) for x in ps.split()]) for ps in pos_strs]
 
     # test trees
-    tree0 = Tree.fromstring('(S (NP (NNP Alex) ) (VP (VBD is) (NP (PRP him))))')
-    tree1 = Tree.fromstring('(S (NP (NNP John) ) (VP (VBD said) (SBAR (-NONE- 0) \
-        (S (NP (PRP he) ) (VP (VBD likes) (NP (NNS dogs) ) ) ) ) ) )')
-    tree2 = Tree.fromstring('(S (NP (NNP John) ) (VP (VBD said) (SBAR (-NONE- 0) \
-        (S (NP (NNP Mary) ) (VP (VBD likes) (NP (PRP him) ) ) ) ) ) )')
-    tree3 = Tree.fromstring('(S (NP (NNP John)) (VP (VBD saw) (NP (DT a) \
-        (JJ flashy) (NN hat)) (PP (IN at) (NP (DT the) (NN store)))))')
-    tree4 = Tree.fromstring('(S (NP (PRP He)) (VP (VBD showed) (NP (PRP it)) \
-        (PP (IN to) (NP (NNP Terrence)))))')
-    tree5 = Tree.fromstring("(S(NP-SBJ (NNP Judge) (NNP Curry))\
-        (VP(VP(VBD ordered)(NP-1 (DT the) (NNS refunds))\
-        (S(NP-SBJ (-NONE- *-1))(VP (TO to) (VP (VB begin)\
-        (NP-TMP (NNP Feb.) (CD 1))))))(CC and)\
-        (VP(VBD said)(SBAR(IN that)(S(NP-SBJ (PRP he))(VP(MD would)\
-        (RB n't)(VP(VB entertain)(NP(NP (DT any) (NNS appeals))(CC or)\
-        (NP(NP(JJ other)(NNS attempts)(S(NP-SBJ (-NONE- *))(VP(TO to)\
-        (VP (VB block) (NP (PRP$ his) (NN order))))))(PP (IN by)\
-        (NP (NNP Commonwealth) (NNP Edison)))))))))))(. .))")
-    tree6 = Tree.fromstring('(S (NP (NNP John) ) (VP (VBD said) (SBAR (-NONE- 0) \
-        (S (NP (NNP Mary) ) (VP (VBD likes) (NP (PRP herself) ) ) ) ) ) )')
+    tests = [
+        (
+        [Tree.fromstring('(S (NP (NNP Alex) ) (VP (VBD is) (NP (PRP him))))')], 
+        (1,1,0)
+        ),
 
-    t, p = hobbs([tree0], (1,1,0))
-    print(t[p])
-    # print(hobbs([tree1], (1,1,1,0,0)))
+        (
+        [Tree.fromstring('(S (NP (NNP She) ) (VP (VBD loves) (NP (PRP herself))))')], 
+        (1,1,0)
+        ),
+
+        (
+        [Tree.fromstring('(S (NP (NNP Tom) ) (VP (VBD said) (SBAR (-NONE-) (S (NP (PRP he) ) (VP (VBD likes) (NP (NNS dogs) ) ) ) ) ) )')],
+        (1,1,1,0,0)
+        ),
+
+        (
+        [Tree.fromstring('(S (NP (NNP John) ) (VP (VBD said) (SBAR (-NONE-) (S (NP (NNP Mary) ) (VP (VBD likes) (NP (PRP him) ) ) ) ) ) )')],
+        (1,1,1,1,1,0)
+        ),
+
+        (
+        [Tree.fromstring('(S (NP (NNP Mary)) (VP (VBD saw) (NP (DT a) (JJ flashy) (NN hat)) (PP (IN at) (NP (DT the) (NN store)))))'),
+        Tree.fromstring('(S (NP (PRP He)) (VP (VBD showed) (NP (PRP it)) (PP (IN to) (NP (NNP Amy)))))')],
+        (1,1,0)
+        )
+    ]
+         
+    main(tests)
