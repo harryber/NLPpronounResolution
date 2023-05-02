@@ -126,12 +126,12 @@ def _check_gender(tree, pos, pn) -> bool:
 
             # check male name <-> female pronoun
             if c_leaf.lower() in names['male'] and c_leaf.lower() not in names['female']:
-                if pn in female or pn in inanimate:
+                if pn in female:
                     return False
                 
             # check female name <-> male pronoun
             if c_leaf.lower() in names['female'] and c_leaf.lower() not in names['male']:
-                if pn in male or pn in inanimate:
+                if pn in male:
                     return False
                 
     return True
@@ -217,11 +217,12 @@ def hobbs(trees: 'list[Tree]', pos: tuple):
 
         ### IF Y IS S, TRAVERSE RIGHT DOWN TO ANY NP OR S, PROPOSE ANY NP ###
 
-        if not is_np(cur):
-            for n in nodes:
+        if not is_np(tree[cur]):
+            while not nodes.empty():
+                n = nodes.get()
                 if is_np(tree[n]) and propose(tree, n, pn):
                     return tree, n
-                elif is_np_or_s:
+                elif is_np_or_s(tree[n]):
                     break
 
     ### TRAVERSE PREVIOUS SENTENCES L->R, BF, PROPOSE ANY NP ###
@@ -231,7 +232,8 @@ def hobbs(trees: 'list[Tree]', pos: tuple):
 
         while not nq.empty():
             node_p = nq.get()
-            if is_np_or_s(t[node_p]) and propose(t, node_p, pn):
+
+            if is_np(t[node_p]) and propose(t, node_p, pn):
                 return t, node_p
                 
         return None, None
@@ -245,19 +247,19 @@ def pretty_print(tts, tp, t, p):
     '''
     for i, tt in enumerate(tts):
         if tt == t:
-            # add '<' to front of first word in antecedent
+            # add '[' to front of first word in antecedent
             f = tt[p].leaf_treeposition(0)
-            tt[p][f] = f'<{tt[p][f]}'
+            tt[p][f] = f'[{tt[p][f]}'
 
-            # add '>' to end of last word in antecedent
+            # add ']' to end of last word in antecedent
             l = tt[p].leaf_treeposition(len(tt[p].leaves())-1)
-            tt[p][l] = f'{tt[p][l]}>'
+            tt[p][l] = f'{tt[p][l]}]'
         if i == len(tts)-1:
             # add brackets around pronoun
             x = tt[tp].leaf_treeposition(0)
             tt[tp] = f'<{tt[tp][x]}>'
 
-    s = '. '.join([' '.join(tt.leaves()) for tt in tts] + [''])
+    s = ' '.join([' '.join(tt.leaves()) for tt in tts] + [''])
     if t:
         print(f'[+] {s}')
     else:
@@ -270,45 +272,34 @@ def main(tests):
         pretty_print(tts, tp, t, p)
 
 if __name__ == '__main__':
-    assert len(sys.argv) == 3, f'expected 2 arguments, received {len(sys.argv)-1}'
+    data_path = sys.argv[1]
 
-    trees_path, pos_path = sys.argv[1:3]
+    with open(data_path, 'r') as f:
+        raw = f.readlines()
 
-    # with open(trees_path, 'r') as f:
-    #     trees = f.readlines()
+    raw_q = queue.Queue()
+    for rt in raw:
+        raw_q.put(rt)
 
-    # with open(pos_path, 'r') as f:
-    #     pos_strs = f.readlines()
+    data = []
 
-    # pos = [tuple([int(x) for x in ps.split()]) for ps in pos_strs]
+    while not raw_q.empty():
+        sentences = []
+        while not raw_q.empty():
+            s = raw_q.get()
+            if s == '' or s == '\n':
+                break
+            else:
+                sentences.append(s)
 
-    # test trees
-    tests = [
-        (
-        [Tree.fromstring('(S (NP (NNP Alex) ) (VP (VBD is) (NP (PRP him))))')], 
-        (1,1,0)
-        ),
-
-        (
-        [Tree.fromstring('(S (NP (NNP She) ) (VP (VBD loves) (NP (PRP herself))))')], 
-        (1,1,0)
-        ),
-
-        (
-        [Tree.fromstring('(S (NP (NNP Tom) ) (VP (VBD said) (SBAR (-NONE-) (S (NP (PRP he) ) (VP (VBD likes) (NP (NNS dogs) ) ) ) ) ) )')],
-        (1,1,1,0,0)
-        ),
-
-        (
-        [Tree.fromstring('(S (NP (NNP John) ) (VP (VBD said) (SBAR (-NONE-) (S (NP (NNP Mary) ) (VP (VBD likes) (NP (PRP him) ) ) ) ) ) )')],
-        (1,1,1,1,1,0)
-        ),
-
-        (
-        [Tree.fromstring('(S (NP (NNP Mary)) (VP (VBD saw) (NP (DT a) (JJ flashy) (NN hat)) (PP (IN at) (NP (DT the) (NN store)))))'),
-        Tree.fromstring('(S (NP (PRP He)) (VP (VBD showed) (NP (PRP it)) (PP (IN to) (NP (NNP Amy)))))')],
-        (1,1,0)
-        )
-    ]
+        trees: 'list[Tree]' = [Tree.fromstring(x) for x in sentences]
+        
+        for t in trees:
+            for i, l in enumerate(t.leaves()):
+                if l[0] == '<' and l[-1] == '>':
+                    lp = t.leaf_treeposition(i)
+                    t[lp] = t[lp][1:-1]
+                    data.append((trees, lp[:-1]))
+                    break
          
-    main(tests)
+    main(data)
