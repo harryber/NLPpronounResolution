@@ -1,0 +1,14 @@
+(S (NP (NNP Tom)) (VP (VBD said) (S (X5326 (NP (PRP <he>)) (VP (VBZ likes) (NP (NNS dogs)))) (. .))))
+
+(S (NP (DT The) (NNS keys)) (VP (VBN typed) (S (X5326 (NP (NP (DT the) (NNS words)) (PP (IN because) (NP (PRP <they>)))) (VP (VBD were) (VP (VBD meant) (VP (TO to) (VP (VB be) (VP (VBN typed))))))) (. .))))
+
+(S (X21380 (X14982 (S (NP (DT The) (NN plane)) (VP (VBD was) (PP (IN in) (NP (DT the) (NN sky))))) (CC and)) (S (NP (PRP <it>)) (VP (VBD was) (ADVP (RB fast))))) (. .))
+
+(S (X21380 (X14982 (S (NP (NNP Joe)) (VP (VBD crashed) (PP (IN into) (NP (NNP Mike))))) (CC and)) (S (NP (PRP <he>)) (VP (VBD had) (VP (TO to) (VP (VB pay) (PP (IN for) (NP (DT the) (NN damage)))))))) (. .))
+
+(S (X21380 (X14982 (S (NP (DT The) (NN light)) (VP (VBD hit) (NP (DT the) (NN mirror)))) (CC and)) (S (NP (PRP <it>)) (VP (VBN reflected)))) (. .))
+
+(S (X21380 (X14982 (S (NP (NNP Google) (NNP Plus)) (VP (VBZ is) (VP (VBN expected) (VP (TO to) (VP (X1429 (VB be) (NP (DT a) (NN replacement))) (PP (IN for) (NP (NNP Facebook)))))))) (CC but)) (S (X433 (NP (PRP <it>)) (ADVP (RB still))) (VP (X1486 (VBZ does) (ADVP (RB not))) (VP (X1744 (VBP have) (ADVP (RB enough))) (NP (JJ active) (NNS users)))))) (. .))
+
+(S (S (NP (DT The) (NNP Washington) (NNP Post)) (VP (VBZ is) (NP (NP (NNP Washington)) (, ,) (NP (NP (NNP D.C.) (POS 's)) (JJS largest) (NN newspaper)))) (. .)))
+((S (S (NP (PRP <It>)) (VP (VBZ is) (ADVP (RB also)) (NP (PRP$ its) (JJS oldest)))) (CC and) (S (VP (VBD was) (VP (VBN founded) (PP (IN in) (NP (CD 1977))))))) (. .))

@@ -11,7 +11,6 @@
 (S (NP (PRP He)) (VP (VBD showed) (NP (PRP <it>)) (PP (IN to) (NP (NNP Amy))))(. .))
 
 (S (S (NP (DT The) (NNP Washington) (NNP Post)) (VP (VBZ is) (NP (NP (NNP Washington)) (, ,) (NP (NP (NNP D.C.) (POS 's)) (JJS largest) (NN newspaper)))) (. .)))
-
 ((S (S (NP (PRP <It>)) (VP (VBZ is) (ADVP (RB also)) (NP (PRP$ its) (JJS oldest)))) (CC and) (S (VP (VBD was) (VP (VBN founded) (PP (IN in) (NP (CD 1977))))))) (. .))
 
 (S (PP (IN At) (NP (NN age) (CD 19))) (, ,) (NP (NNP Lois)) (VP (VBD moved) (PP (TO to) (NP (NNP Florida))) (PP (IN with) (NP (PRP$ <her>) (NN mother))) (. .)))

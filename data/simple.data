@@ -1,0 +1,257 @@
+(S (X5326 (NP (NNP Alex)) (VP (VBZ is) (NP (PRP <him>)))) (. .))
+
+(S (X5326 (NP (PRP Mary)) (VP (VBZ loves) (NP (PRP <herself>)))) (. .))
+
+(S (NP (NNP Tom)) (VP (VBD said) (S (X5326 (NP (PRP <he>)) (VP (VBZ likes) (NP (NNS dogs)))) (. .))))
+
+(S (NP (NNP John)) (VP (VBD said) (S (X5326 (NP (NNP Mary)) (VP (VBZ likes) (NP (PRP <him>)))) (. .))))
+
+(S (NP (DT The) (NN team)) (VP (VBD beat) (S (X5326 (NP (NP (DT the) (NN opponent)) (PP (IN because) (NP (PRP <they>)))) (VP (VBD were) (ADJP (JJR better)))) (. .))))
+
+(S (X21380 (X14982 (S (NP (DT The) (NN moon)) (VP (VBD was) (ADJP (JJ full)))) (CC and)) (S (NP (PRP <it>)) (VP (VBD was) (ADJP (JJ beautiful))))) (. .))
+
+(S (X21380 (X14982 (S (NP (NNP Tina)) (VP (VBD ran) (NP (DT a) (NN marathon)))) (CC and)) (S (NP (PRP <she>)) (VP (VBD was) (ADJP (RB very) (JJ tired))))) (. .))
+
+(S (X5326 (NP (X178 (NP (NNP Abigail)) (CC and)) (NP (PRP$ <her>) (NN mom))) (VP (VBD walked) (PP (IN on) (NP (DT the) (NN beach))))) (. .))
+
+(S (X21380 (X14982 (S (NP (NN Today)) (VP (VBD was) (VP (VBP Aditya) (VP (VBZ 's) (NP (NN birthday)))))) (CC and)) (S (NP (PRP$ <his>) (NN cake)) (VP (VBD was) (NP (NN vanilla))))) (. .))
+
+(S (X5326 (NP (NNP Oranges)) (VP (X1744 (VBP are) (ADVP (JJ healthy) (PP (IN because) (NP (PRP <they>))))) (VP (X1429 (VB have) (NP (DT a) (NN lot))) (PP (IN of) (NP (JJ vitamin) (NNS C)))))) (. .))
+
+(S (X5326 (NP (NNS Everyone)) (VP (X1567 (VBD was) (ADVP (JJ happy) (PP (IN since) (NP (PRP <they>))))) (VP (X1567 (VBD were) (ADVP (RB about))) (VP (TO to) (VP (VB graduate)))))) (. .))
+
+(S (X5326 (NP (NNP Selena)) (VP (X1486 (VBZ is) (ADVP (RB better) (PP (IN at) (NP (NP (NN math)) (PP (IN than) (NP (PRP <she>))))))) (VP (VBZ is) (PP (IN at) (NP (NN history)))))) (. .))
+
+(S (NP (DT The) (NN government)) (VP (VBN raised) (S (X5326 (NP (NP (NNS taxes)) (PP (IN so) (NP (PRP <they>)))) (VP (MD could) (VP (VB pay) (PP (IN for) (NP (JJ social) (NNS services)))))) (. .))))
+
+(S (X5326 (NP (PRP I)) (VP (X1473 (VBD helped) (NP (NNP Diane))) (PP (IN with) (NP (PRP$ <her>) (NN luggage))))) (. .))
+
+(S (X5326 (NP (NNP Louis)) (VP (VBD lived) (UCP (X5943 (PP (IN on) (NP (NN oak) (NN street))) (CC and)) (SBAR (WHNP (WDT that)) (S (VP (VBD explained) (NP (PRP$ <his>) (NN personality)))))))) (. .))
+
+(S (X5326 (NP (NNP Quinn)) (VP (X1441 (X1414 (VBD drove) (PP (IN past) (NP (PRP$ my) (NN house)))) (PP (IN on) (NP (PRP$ <her>) (NN way)))) (PP (TO to) (NP (NN school))))) (. .))
+
+(S (X5326 (NP (NNP Mary)) (VP (VBN paid) (PP (IN for) (NP (PRP$ <her>) (NN mistake))))) (. .))
+
+(S (X5326 (NP (NNP Nancy)) (VP (VBD decided) (VP (TO to) (VP (X1429 (VB make) (NP (X5727 (DT the) (NN space)) (NN station))) (NP (PRP$ <her>) (NN home)))))) (. .))
+
+(S (NP (DT The) (NN guy)) (VP (X1814 (X1728 (VBD ran) (PRT (RP out))) (PP (IN of) (NP (NN money)))) (SBAR (IN so) (S (X5326 (NP (PRP he)) (VP (VBD had) (VP (TO to) (VP (VB stop) (VP (VBG playing) (NP (NN poker))))))) (. .)))))
+
+(S (NP (PRP It)) (VP (X1421 (VBD became) (ADJP (JJ clear) (PP (TO to) (NP (NNP Mary))))) (SBAR (WHNP (WDT that)) (S (X21116 (X374 (ADVP (RB only)) (NP (PRP <she>))) (VP (MD could) (VP (VB make) (ADJP (NP (PRP herself)) (JJ happy))))) (. .)))))
+
+(S (X20791 (X20790 (SBAR (WHADVP (WRB When)) (S (NP (DT the) (NNS hikers)) (VP (VBD got) (ADJP (JJ close))))) (NP (PRP <they>))) (VP (VBD realized) (NP (DT the) (NN danger)))) (. .))
+
+(S (NP (NNP Bill)) (VP (X1728 (VBD woke) (PRT (RP up))) (SBAR (WHADVP (WRB when)) (S (X5326 (NP (PRP <he>)) (VP (VBD heard) (NP (DT the) (NN noise)))) (. .)))))
+
+(S (X5326 (NP (NNP Morgan)) (VP (X1414 (VBD ran) (PP (IN from) (NP (DT the) (NN giraffe)))) (PP (TO to) (NP (PRP$ <her>) (NN house))))) (. .))
+
+(S (X5326 (NP (DT The) (NN bug)) (VP (VBD was) (VP (VBG having) (S (NP (NP (X5734 (DT an) (JJ excellent)) (NN day)) (PP (IN until) (NP (PRP <it>)))) (VP (VBD hit) (NP (DT the) (NN door))))))) (. .))
+
+(S (X5326 (NP (NNP Mina)) (VP (X1432 (VP (X1728 (VBD picked) (PRT (RP up))) (NP (NN trash))) (CC and)) (VP (X1473 (VBD dumped) (NP (PRP <it>))) (PP (IN in) (NP (NP (X8446 (PRP$ his) (NN neighbor)) (POS 's)) (NN yard)))))) (. .))
+
+(S (X20829 (X5432 (X106 (S (NP (NN Today)) (VP (VBD was) (ADVP (RB long)))) (, ,)) (CC but)) (S (NP (PRP <it>)) (VP (VBD was) (NP (X5734 (DT a) (JJ good)) (NN day))))) (. .))
+
+(S (NP (NNP Jordan)) (VP (VBD hoped) (S (X5326 (NP (PRP$ <his>) (NNS batteries)) (VP (VBD were) (ADJP (RB still) (VBN charged)))) (. .))))
+
+(S (X5326 (NP (NP (DT The) (NNS ears)) (PP (IN of) (NP (DT the) (NN fox)))) (VP (VBD helped) (NP (X8353 (NP (PRP <it>)) (NN sense)) (NN danger)))) (. .))
+
+(S (X20829 (X5432 (X106 (S (NP (NNP Pie)) (VP (VBZ is) (ADJP (JJ delicious)))) (, ,)) (CC but)) (S (NP (PRP <it>)) (VP (X1486 (VBZ is) (ADVP (RB not))) (ADJP (X5650 (RB as) (JJ good)) (PP (IN as) (NP (NN cake))))))) (. .))
+
+(S (NP (DT The) (NN engineer)) (VP (VBD wondered) (SBAR (IN if) (S (X5326 (NP (PRP he)) (VP (MD would) (VP (VB appreciate) (NP (X8446 (PRP$ <her>) (NN action)) (NNS figures))))) (. .)))))
+
+(S (NP (DT The) (NN tsunami)) (VP (X1521 (VBD broke) (DT the)) (VP (VB levy) (SBAR (X6061 (IN as) (IN if)) (S (X5326 (NP (PRP <it>)) (VP (X1567 (VBD was) (ADVP (RB not))) (NP (EX there)))) (. .))))))
+
+(S (X5326 (NP (DT The) (NN city)) (VP (X1515 (VBZ is) (ADJP (X5645 (NP (DT a) (NN lot)) (RBR less)) (JJ full))) (SBAR (IN than) (S (NP (PRP <it>)) (VP (VBD used) (VP (TO to) (VP (VB be)))))))) (. .))
+
+(S (NP (NNP John)) (VP (VBD realized) (S (NP (DT the) (NNS cars)) (VP (X1421 (VBD were) (ADJP (JJ alive))) (SBAR (WHADVP (WRB when)) (S (X5326 (NP (PRP <they>)) (VP (VBD started) (VP (VBG talking)))) (. .)))))))
+
+(S (X5326 (NP (DT The) (JJR waiter)) (VP (X1473 (VBD brought) (NP (NNP Gina))) (NP (PRP$ <her>) (NN food)))) (. .))
+
+(S (X5326 (NP (NNP Patricia)) (VP (X1517 (VBN found) (NP (DT the) (NN meaning))) (PP (IN of) (NP (NP (NN life)) (PP (IN in) (NP (NP (PRP$ <her>) (NN bowl)) (PP (IN of) (NP (NN cereal))))))))) (. .))
+
+(S (X5326 (NP (DT The) (NN cookie)) (VP (X1567 (VBD was) (ADVP (JJ stale) (PP (IN as) (NP (PRP <it>))))) (VP (VBD had) (VP (X1593 (VBN been) (PRT (RP out))) (PP (IN for) (NP (DT an) (NN hour))))))) (. .))
+
+(S (X5326 (NP (NNP Gwen)) (VP (X1582 (X1473 (VBD had) (NP (X8331 (PRP$ her) (JJS best)) (NN sleep))) (ADVP (RB ever))) (PP (IN on) (NP (NP (X6246 (PRP$ <her>) (JJ new)) (NN bed)) (PP (IN of) (NP (NNS nails))))))) (. .))
+
+(S (X5326 (NP (PRP He)) (VP (X1517 (VBN found) (NP (DT a) (NN nail))) (PP (IN in) (NP (X6246 (PRP$ <his>) (JJ walnut)) (NN shell))))) (. .))
+
+(S (NP (NNP Nancy)) (VP (VBN drank) (S (X19432 (X433 (NP (X178 (NP (NP (DT a) (NN lot)) (PP (IN of) (NP (NN beer)))) (CC and)) (NP (PRP <she>))) (ADVP (RB immediately))) (VP (VBD lost) (NP (CD three) (NNS days)))) (. .))))
+
+(S (NP (NNP Georgia)) (VP (VB let) (S (X5326 (NP (PRP me)) (VP (X1429 (VB help) (NP (PRP her))) (PP (IN with) (NP (PRP$ <her>) (NN homework))))) (. .))))
+
+(S (NP (NNP Brian)) (VP (VBN thought) (S (X5326 (NP (PRP <he>)) (VP (VBD beat) (NP (X5734 (DT the) (JJ grizzly)) (NN bear)))) (. .))))
+
+(S (X20843 (X77 (X76 (SBAR (IN After) (S (NP (NNP Leah)) (VP (VBD made) (NP (NN breakfast))))) (, ,)) (NP (PRP <she>))) (VP (VBD got) (ADJP (JJ ready) (PP (IN for) (NP (DT the) (NN day)))))) (. .))
+
+(S (X5326 (NP (NP (NNP Mia) (POS 's)) (NN son)) (VP (VBD complained) (SBAR (IN until) (S (NP (PRP she)) (VP (X1473 (VBD bought) (NP (PRP <him>))) (NP (X5727 (DT a) (NN candy)) (NN bar))))))) (. .))
+
+(S (NP (DT The) (NNS lawyers)) (VP (X1744 (VBP do) (ADVP (RB not))) (VP (VB realize) (S (X5326 (NP (PRP <they>)) (VP (MD can) (VP (VB make) (NP (NN music))))) (. .)))))
+
+(S (X21380 (X14982 (S (NP (X5734 (DT The) (JJ dead)) (NNS trees)) (VP (VBD were) (VP (VBN ignited)))) (CC and)) (S (NP (PRP <they>)) (VP (X1429 (VB spread) (NP (NN fire))) (ADVP (RB quickly))))) (. .))
+
+(S (NP (NNP Pigs)) (VP (VB get) (S (X5326 (NP (PRP$ <their>) (NN chance)) (VP (TO to) (VP (VB fly) (PP (IN in) (NP (NN heaven)))))) (. .))))
+
+(S (X5326 (NP (X7024 (NNP Tina) (CC and)) (NNP John)) (VP (VBD went) (VP (TO to) (VP (X1429 (VB get) (NP (PRP <her>))) (NP (DT a) (NN snack)))))) (. .))
+
+(S (NP (NNP Random) (NNS words)) (VP (X1429 (VB like) (NP (PRP it))) (SBAR (WHADVP (WRB when)) (S (X5326 (NP (PRP <they>)) (VP (VBP are) (VP (VBN written)))) (. .)))))
+
+(S (X5326 (NP (NNP Lara)) (VP (X1421 (VBD was) (ADJP (JJ afraid))) (SBAR (WHNP (WDT that)) (S (NP (DT a) (NN ghost)) (VP (MD would) (VP (VB attack) (NP (PRP <her>)))))))) (. .))
+
+(S (X5326 (NP (NNP Aidan)) (VP (X1515 (VBZ is) (ADJP (JJ happy))) (SBAR (WHNP (WDT that)) (S (NP (PRP <he>)) (VP (VBZ is) (VP (VBN done) (PP (VBG writing) (NP (NNS sentences))))))))) (. .))
+
+(S (X20829 (X5432 (X106 (S (NP (NNP Harry)) (VP (VBZ is) (VP (VBG writing) (NP (DT this))))) (, ,)) (CC but)) (S (NP (PRP <he>)) (VP (VBZ wants) (VP (TO to) (VP (VB sleep)))))) (. .))
+
+(S (NP (NNP Lucas)) (VP (X1567 (VBD did) (ADVP (RB not))) (VP (VB realize) (SBAR (WHNP (WDT that)) (S (X5326 (NP (X178 (NP (PRP <he>)) (CC and)) (NP (NNP Carl))) (VP (X1414 (VBD were) (PP (IN in) (NP (DT the) (NN middle)))) (PP (IN of) (NP (DT a) (NN game))))) (. .))))))
+
+(S (NP (NNP Summer)) (VP (VBD forgot) (SBAR (WHNP (WDT that)) (S (X5326 (NP (PRP <she>)) (VP (VBD needed) (VP (TO to) (VP (VB turn) (PP (IN in) (NP (DT the) (NN assignment))))))) (. .)))))
+
+(S (X5326 (NP (NNP Jessica)) (VP (X1728 (VBD drove) (PRT (RP off))) (S (NP (NP (DT a) (NN cliff)) (PP (IN because) (NP (PRP <she>)))) (VP (VBD was) (NP (X5734 (DT a) (JJ terrible)) (NN driver)))))) (. .))
+
+(S (NP (X5734 (DT The) (JJ terrorist)) (NN organization)) (VP (X2082 (X1594 (X1473 (VBD started) (NP (NN bombing))) (NP (DT the) (NNS buildings))) (, ,)) (SBAR (IN so) (S (X5326 (NP (NNP Tom)) (VP (X1567 (VBD did) (ADVP (RB not))) (VP (VB go) (PP (IN inside) (NP (PRP <them>)))))) (. .)))))
+
+(S (NP (NNP Sarah)) (VP (VBD knew) (S (X5326 (NP (X6246 (PRP$ <her>) (JJ favorite)) (NN color)) (VP (VBD was) (ADJP (JJ pink)))) (. .))))
+
+(S (X5326 (NP (NNP Bartholomew)) (VP (VBN smashed) (S (NP (NP (DT the) (NN potato)) (PP (IN because) (NP (PRP <he>)))) (VP (VBD was) (ADJP (JJ angry) (PP (IN at) (NP (NN life)))))))) (. .))
+
+(S (X21233 (S (X5326 (NP (NNP Jackson)) (VP (VBD was) (NP (X5734 (DT an) (JJ evil)) (NN guy)))) (. .)) (S (NP (NNP John)) (VP (X1432 (VP (VBD knew) (NP (DT this))) (CC and)) (VP (VBD wanted) (S (NP (PRP <him>)) (VP (VBN arrested))))))) (. .))
+
+(S (SBAR (WHADVP (WRB How)) (S (VP (VBD did) (NP (NNP Jack))))) (VP (VB know) (SBAR (WHNP (WDT that)) (S (X5326 (NP (PRP <he>)) (VP (VBD was) (NP (DT a) (NN human)))) (. ?)))))
+
+(S (NP (NNP Thomas)) (VP (VBD thought) (SBAR (WHNP (WDT that)) (S (X5326 (NP (X178 (NP (PRP <he>)) (CC and)) (NP (NNP Mary))) (VP (MD could) (VP (X1429 (VB rule) (NP (DT the) (NN galaxy))) (ADVP (RB together))))) (. .)))))
+
+(S (NP (NNP Tom) (NNP Sawyer)) (VP (X1784 (X1422 (X1421 (VBD was) (ADJP (RB not) (JJ interested))) (PP (IN in) (NP (NNS electronics)))) (, ,)) (SBAR (IN for) (S (X5326 (NP (PRP <he>)) (VP (X1414 (VBD lived) (PP (IN in) (NP (DT a) (NN time)))) (ADVP (RB long) (RB ago)))) (. .)))))
+
+(S (NP (DT The) (NNS students)) (VP (VBD were) (VP (X2984 (X1842 (X1657 (ADVP (RB not)) (VBN focused)) (PP (IN on) (NP (NN graduation)))) (, ,)) (SBAR (IN so) (S (X5326 (NP (PRP <they>)) (VP (X1582 (X1473 (VBD played) (NP (NNS games))) (ADVP (RB instead))) (PP (IN of) (NP (VBG working))))) (. .))))))
+
+(S (NP (NNP Ken)) (VP (X3788 (X3787 (X1421 (VBD was) (ADJP (JJ desperate))) (VP (TO to) (VP (VB drive) (NP (X5734 (DT a) (JJ nice)) (NN car))))) (, ,)) (SBAR (IN so) (S (X5326 (NP (PRP <he>)) (VP (X1432 (VP (VBD worked) (ADJP (RB very) (JJ hard))) (CC and)) (VP (X1473 (VBD made) (NP (DT a) (NN lot))) (PP (IN of) (NP (NN money)))))) (. .)))))
+
+(S (X20829 (X5432 (X106 (S (NP (NNP Johnny) (NNP Depp)) (VP (VBD was) (NP (X5734 (DT an) (JJ amazing)) (NN actor)))) (, ,)) (CC but)) (S (NP (NNP Amber) (NNP Heard)) (VP (VBD tried) (VP (TO to) (VP (VB cancel) (NP (PRP <him>))))))) (. .))
+
+(S (X20809 (X254 (X208 (ADVP (RB Back) (PP (IN in) (NP (DT the) (NN day)))) (, ,)) (NP (NNS musicians))) (VP (X1567 (VBD did) (ADVP (RB not))) (VP (VBP have) (VP (X2149 (X1425 (VB access) (PP (TO to) (NP (X5734 (DT the) (JJ same)) (NN technology)))) (, ,)) (SBAR (IN so) (S (NP (PRP <they>)) (VP (VBD had) (VP (TO to) (VP (VB improvise)))))))))) (. .))
+
+(S (NP (NNP Kendall)) (VP (VBD knew) (SBAR (WHNP (WDT that)) (S (X5326 (NP (NNS fires)) (VP (X2677 (X1611 (VBP need) (S (NP (NN oxygen)) (VP (TO to) (VP (VB burn))))) (, ,)) (SBAR (IN so) (S (NP (PRP <she>)) (VP (X1567 (VBD felt) (ADVP (JJ fortunate))) (VP (TO to) (VP (VB be) (PP (IN in) (NP (JJ outer) (NN space)))))))))) (. .)))))
+
+(S (X5326 (NP (NNP Jamie)) (VP (X1414 (VBD went) (PP (TO to) (NP (DT the) (NN mall)))) (PP (IN after) (NP (PRP$ <her>) (NN meeting))))) (. .))
+
+(S (X5326 (NP (NNP Josh)) (VP (VBD forgot) (VP (TO to) (VP (VB eat) (NP (PRP$ <his>) (NN cake)))))) (. .))
+
+(S (X19432 (X433 (NP (NNS Soldiers)) (ADVP (RB sometimes))) (VP (X1744 (VBP do) (ADVP (RB not))) (VP (VB know) (SBAR (WHADVP (WRB when)) (S (NP (PRP <they>)) (VP (VBP are) (VP (VBN supposed) (VP (TO to) (VP (VB hold) (NP (PRP$ their) (NN fire))))))))))) (. .))
+
+(S (X433 (NP (NNP Movie) (NNS theaters)) (ADVP (RB often))) (VP (X1429 (VB play) (NP (NNS movies))) (SBAR (WHNP (WDT that)) (S (X20829 (X5432 (X106 (S (NP (NNS people)) (VP (VBP do) (ADJP (RB not) (JJ like)))) (, ,)) (CC but)) (S (NP (PRP <they>)) (VP (VB go) (ADVP (RB anyway))))) (. .)))))
+
+(S (X20949 (X62 (X61 (PP (IN By) (NP (DT the) (NN way))) (, ,)) (NP (NNP Jim))) (VP (VBD said) (S (NP (PRP <he>)) (VP (VBZ needs) (VP (TO to) (VP (VBP eat) (ADJP (JJ first)))))))) (. .))
+
+(S (X5326 (NP (NNP Henry)) (VP (X1631 (MD will) (ADVP (RB not))) (VP (VB stop) (VP (VBG thinking) (PP (IN about) (NP (NP (PRP$ <his>) (NN math)) (ADJP (JJ final)))))))) (. .))
+
+(S (NP (NNP Paul)) (VP (VBN thought) (S (X5326 (NP (PRP <he>)) (VP (VBD was) (NP (X8199 (DT the) (VBN chosen)) (NN one)))) (. .))))
+
+(S (X5326 (NP (NNP David)) (VP (VBD forgot) (PP (IN about) (NP (X6246 (PRP$ <his>) (JJ midterm)) (NN tomorrow))))) (. .))
+
+(S (X20829 (X5432 (X106 (S (X433 (NP (NNPS Teachers)) (ADVP (RB often))) (VP (X1429 (VB give) (NP (JJ extra) (NN credit))) (PP (TO to) (NP (ADJP (RB well) (JJ deserving)) (NNS students))))) (, ,)) (CC but)) (S (NP (X19 (NP (DT this) (NN year)) (, ,)) (NP (PRP <they>))) (VP (X1567 (VBD decided) (ADVP (RB not))) (VP (TO to) (VP (VB give) (NP (X5734 (DT any) (JJ extra)) (NN credit))))))) (. .))
+
+(S (X5326 (NP (NNP Ron)) (VP (VBD kept) (VP (VBG losing) (NP (PRP$ <his>) (NN rat))))) (. .))
+
+(S (X5326 (NP (NNP John) (NNP Williams)) (VP (X1486 (VBZ is) (ADVP (RB arguably))) (NP (NP (X8222 (DT the) (JJS best)) (NN composer)) (PP (IN of) (NP (NP (DT all) (NN time)) (PP (IN because) (NP (NP (PRP <he>)) (VP (VBZ has) (VP (VBN written) (PP (IN so) (NP (X7026 (JJ many) (JJ iconic)) (NNS scores)))))))))))) (. .))
+
+(S (X20829 (X5432 (X106 (S (NP (NNP Tina)) (VP (VBZ likes) (VP (TO to) (VP (VB eat) (NP (NNS snails)))))) (, ,)) (CC but)) (S (NP (PRP$ <her>) (NN mom)) (VP (VBZ says) (SBAR (WHPP (IN that) (WHNP (WDT that))) (S (VP (VBZ is) (ADJP (JJ bad)))))))) (. .))
+
+(S (X5326 (NP (NNP Kristen)) (VP (VBZ says) (NP (NP (PRP <she>)) (VP (X1414 (VBD graduated) (PP (IN from) (NP (NNP Pomona)))) (PP (IN in) (NP (CD 2004))))))) (. .))
+
+(S (X5326 (NP (PRP$ My) (JJ buddy)) (VP (X1414 (VBD went) (PP (TO to) (NP (X5734 (DT the) (JJ super)) (NN market)))) (PP (IN because) (NP (X4195 (NP (PRP <he>)) (VBN needed)) (NN cheese))))) (. .))
+
+(S (X5326 (NP (NNP Mary)) (VP (X1474 (X1473 (VBD ate) (NP (X6643 (JJR more) (NN gouda)) (NN cheese))) (PP (IN than) (NP (DT any)))) (PP (IN of) (NP (PRP$ <her>) (NNS friends))))) (. .))
+
+(S (X5326 (NP (NP (DT The) (NN restaurant)) (VP (VBD was) (VP (VBN packed) (PP (IN because) (NP (PRP <it>)))))) (VP (VBZ serves) (NP (X6608 (X2941 (JJ cheap) (, ,)) (NN quality)) (NN food)))) (. .))
+
+(S (X20829 (X5432 (X106 (S (NP (NNP Disneyland)) (VP (VBN opened) (PP (IN in) (NP (CD 1955))))) (, ,)) (CC and)) (S (NP (PRP <it>)) (VP (VBZ has) (VP (X1795 (VBN been) (ADJP (RB extremely) (JJ popular))) (ADVP (RB ever) (RB since)))))) (. .))
+
+(S (NP (X7024 (NNP Olivia) (CC and)) (NNP Julia)) (VP (VBD knew) (S (X5326 (NP (PRP <they>)) (VP (VBD were) (VP (VBG going) (VP (TO to) (VP (X1429 (VB be) (NP (JJS best) (NNS friends))) (PP (IN from) (NP (DT the) (NN beginning)))))))) (. .))))
+
+(S (X5326 (NP (X5727 (DT The) (NN bridge)) (NN troll)) (VP (VBD demanded) (S (NP (DT the) (NNS tourists)) (VP (X1429 (VB pay) (NP (PRP <him>))) (NP (DT a) (NN toll)))))) (. .))
+
+(S (NP (NP (NNS Shoppers)) (PP (IN at) (NP (NNP Great) (NNP Mall)))) (VP (X2092 (X1429 (VB get) (NP (X7248 (X5734 (DT a) (JJ fifty)) (NN percent)) (NN discount))) (, ,)) (SBAR (IN so) (S (X5326 (NP (PRP <they>)) (VP (VBD flock) (PP (TO to) (NP (DT the) (NN mall))))) (. .)))))
+
+(S (X21233 (S (X5326 (NP (NNS Cows)) (VP (X1744 (VBP do) (ADVP (RB not))) (VP (VBP have) (NP (JJ great) (NNS lives))))) (. .)) (S (X433 (NP (PRP <They>)) (ADVP (RB just))) (VP (X1429 (VB graze) (NP (DT the) (NNS fields))) (PP (IN until) (NP (NN slaughter) (NN time)))))) (. .))
+
+(S (X5326 (NP (NNP Kate)) (VP (X1567 (VBD went) (ADVP (RB back) (PP (TO to) (NP (NP (NN school)) (PP (IN after) (NP (PRP <she>))))))) (VP (VBD had) (VP (VBN been) (PP (VBG working) (PP (IN for) (NP (CD four) (NNS years)))))))) (. .))
+
+(S (X5326 (NP (NNP James)) (VP (VBD tried) (NP (PRP$ <his>) (JJS best)))) (. .))
+
+(S (X5326 (NP (NP (X5734 (DT The) (JJ upper)) (NN class)) (PP (IN in) (NP (X7370 (DT the) (NNP Hunger)) (NNPS Games)))) (VP (X1474 (X1473 (VBD sent) (NP (NNS teens))) (PP (IN from) (NP (X5753 (DT the) (JJR poorer)) (NN class)))) (PP (IN into) (NP (NP (NN battle)) (PP (IN for) (NP (PRP$ their) (NN entertainment))))))) (. .))
+
+(S (X19432 (X433 (NP (NNPS Zombies)) (ADVP (RB only))) (VP (X1429 (VB eat) (NP (DT the) (NNS brains))) (PP (IN of) (NP (PRP$ their) (NNS friends))))) (. .))
+
+(S (X20829 (X5432 (X106 (S (NP (NNS Plantains)) (VP (VB look) (PP (IN like) (NP (JJ mini) (NNS bananas))))) (, ,)) (CC but)) (S (NP (PRP <they>)) (VP (VBP are) (ADJP (RB still) (JJ different))))) (. .))
+
+(S (X5326 (NP (NNS Crows)) (VP (VB circle) (PP (IN around) (NP (PRP$ their) (NN prey))))) (. .))
+
+(S (X5326 (NP (NNP Mary)) (VP (VBZ enjoys) (NP (NP (X8446 (PRP$ <her>) (NN father)) (POS 's)) (NN cooking)))) (. .))
+
+(S (X5326 (NP (NNP Moses)) (VP (X1473 (VBD parted) (NP (X7370 (DT the) (NNP Red)) (NNP Sea))) (PP (IN for) (NP (PRP$ <his>) (NNS people))))) (. .))
+
+(S (NP (JJ Aztec) (NNS tombs)) (VP (VBP are) (S (X5326 (NP (NP (DT the) (JJS best)) (PP (IN because) (NP (PRP <they>)))) (VP (VBP are) (ADJP (JJ green)))) (. .))))
+
+(S (X5326 (NP (X5727 (DT The) (NN lab)) (NN assistant)) (VP (X1473 (VBD forgot) (NP (X6246 (PRP$ <her>) (JJ protective)) (NN equipment))) (PP (IN at) (NP (NN home))))) (. .))
+
+(S (X5326 (NP (NNP Josh)) (VP (VBZ likes) (NP (NP (JJ hot) (NN weather)) (PP (IN because) (NP (NP (PRP <he>)) (VP (MD can) (VP (VB relax) (PP (IN on) (NP (DT the) (NN beach)))))))))) (. .))
+
+(S (X5326 (NP (NNS Dogs)) (VP (VBP are) (VP (VBN known) (PP (IN for) (NP (X9569 (X8446 (PRP$ <their>) (NN loyalty)) (CC and)) (NN companionship)))))) (. .))
+
+(S (X5326 (NP (X5727 (DT The) (NN basketball)) (NN team)) (VP (VBD was) (VP (VBN eliminated) (PP (IN from) (NP (NN contention)))))) (. .))
+
+(S (X21380 (X14982 (S (NP (NNP Jill)) (VP (X1567 (VBD did) (ADVP (RB not))) (VP (VBP want) (VP (TO to) (VP (VB go) (VP (VB watch) (NP (DT the) (NN movie)))))))) (CC but)) (S (NP (PRP$ her) (NNS friends)) (VP (VBD insisted) (S (NP (PRP <she>)) (VP (VB go)))))) (. .))
+
+(S (NP (DT The) (NN worm)) (VP (VBD was) (VP (X1432 (VP (VBG moving) (PP (IN along) (NP (DT the) (NN dirt)))) (CC and)) (VP (VBZ leaves) (SBAR (IN like) (S (X5326 (NP (PRP <it>)) (VP (VBD was) (VP (X1823 (VBG running) (PRT (RP away))) (PP (IN from) (NP (NN something)))))) (. .)))))))
+
+(S (X21380 (X14982 (S (NP (NNP School)) (VP (VBD was) (PRT (RP over)))) (CC but)) (S (NP (NNP Connor)) (VP (X1567 (VBD was) (ADVP (RB not))) (VP (X1414 (VBD finished) (PP (IN with) (NP (NP (DT all)) (PP (IN of) (NP (X8446 (PRP$ <his>) (NN school)) (NNS activities)))))) (ADVP (RB yet)))))) (. .))
+
+(S (X5326 (NP (X5727 (DT The) (NN piano)) (NN teacher)) (VP (VBN encouraged) (S (NP (PRP$ <his>) (NN student)) (VP (TO to) (VP (X1425 (VB focus) (PP (IN on) (NP (NN practice)))) (ADVP (RBR more))))))) (. .))
+
+(S (X5326 (NP (NNP John)) (VP (VBN hated) (S (NP (NP (NN chemistry)) (PP (IN because) (NP (PRP <it>)))) (VP (X1567 (VBD involved) (ADVP (RB too))) (NP (JJ much) (NNS mathematics)))))) (. .))
+
+(S (X5326 (NP (NNP Apple)) (VP (VBZ is) (ADJP (JJ famous) (PP (IN for) (NP (X9570 (X9569 (X8446 (PRP$ <their>) (NN tech)) (CC and)) (NN lifestyle)) (NNS products)))))) (. .))
+
+(S (NP (NNP Bobby)) (VP (X1421 (VBD was) (ADJP (X5924 (JJ able) (TO to)) (JJ graduate))) (SBAR (IN although) (S (X5326 (NP (PRP <he>)) (VP (X1567 (VBD was) (ADVP (RB close))) (VP (TO to) (VP (VBG missing) (NP (DT the) (NNS requirements)))))) (. .)))))
+
+(S (NP (PRP Mary)) (VP (MD would) (VP (VB be) (VP (VBD surprised) (SBAR (WHADVP (WRB how)) (S (X21116 (X374 (ADVP (RB much)) (NP (PRP <she>))) (VP (MD would) (VP (VB like) (NP (X2526 (NN chicken) (CC and)) (NNS waffles))))) (. .)))))))
+
+(S (NP (NP (DT The) (NN group)) (PP (IN of) (NP (NNS friends)))) (VP (VBD took) (S (X5326 (NP (X5734 (DT a) (JJ long)) (NN time)) (VP (TO to) (VP (VB build) (S (NP (NP (DT the) (NN computer)) (PP (IN because) (NP (PRP <it>)))) (VP (VBD required) (NP (X7026 (JJ many) (JJ delicate)) (NNS parts))))))) (. .))))
+
+(S (X5326 (NP (PRP$ My) (NNS friends)) (VP (VBD were) (VP (VBN excited) (VP (TO to) (VP (X1731 (ADVP (RB finally)) (VB embark)) (PP (IN on) (NP (X8949 (X6246 (PRP$ <their>) (JJ first)) (JJ international)) (NN trip)))))))) (. .))
+
+(S (NP (NNP Tom)) (VP (VBD had) (S (X5326 (NP (PRP$ <his>) (NN bike)) (VP (VBN stolen))) (. .))))
+
+(S (X5326 (NP (NNP YouTube)) (VP (VBZ is) (NP (NP (X5734 (DT a) (JJ popular)) (NN platform)) (SBAR (WHADVP (WRB where)) (S (NP (NNS users)) (VP (X1767 (X1766 (X1765 (VB upload) (CC and)) (VB share)) (NP (PRP$ <their>) (NNS videos))) (PP (IN with) (NP (NNS others))))))))) (. .))
+
+(S (NP (DT The) (NN marker)) (VP (X1814 (X1728 (VBD ran) (PRT (RP out))) (PP (IN of) (NP (NN ink)))) (SBAR (IN so) (S (X5326 (NP (PRP <it>)) (VP (X1567 (VBD did) (ADVP (RB not))) (VP (X1429 (VB leave) (NP (DT any) (NN mark))) (PP (IN on) (NP (DT the) (NN whiteboard)))))) (. .)))))
+
+(S (NP (DT The) (NN boy)) (VP (X1421 (VBD got) (ADJP (RB so) (JJ mad))) (S (X5326 (NP (PRP <he>)) (VP (VBN hurt) (S (NP (PRP$ his) (NNS knuckles)) (VP (VBG trying) (VP (TO to) (VP (VB punch) (NP (DT a) (NN wall)))))))) (. .))))
+
+(S (NP (DT The) (NN girl)) (VP (X1432 (VP (VBN tripped) (PP (IN on) (NP (DT a) (NN rock)))) (CC and)) (VP (VBD got) (S (X5326 (NP (PRP$ <her>) (NN dress)) (VP (VBN soaked) (PP (IN in) (NP (DT a) (NN puddle))))) (. .)))))
+
+(S (X5326 (NP (X5734 (DT The) (JJ bright)) (NN student)) (VP (X1567 (VBD was) (ADVP (JJ able))) (VP (TO to) (VP (X1429 (VB finish) (NP (PRP$ <their>) (NN homework))) (ADVP (RB quickly)))))) (. .))
+
+(S (X5326 (NP (NNP Larry)) (VP (X1473 (VBD asked) (NP (NNP Tanya))) (SBAR (WHADVP (WRB how)) (S (NP (PRP$ <her>) (NN day)) (VP (X1567 (VBD was) (ADVP (RB so))) (ADVP (RB far))))))) (. .))
+
+(S (NP (X5727 (DT The) (NN garbage)) (NN truck)) (VP (X1414 (VBD came) (PP (IN by) (NP (NP (NNP Lily) (POS 's)) (NN house)))) (S (X21116 (X374 (ADVP (RB twice)) (NP (DT this) (NN week))) (VP (TO to) (VP (VB collect) (NP (PRP$ <her>) (NN trash))))) (. .))))
+
+(S (NP (DT The) (NN king)) (VP (VBD declared) (SBAR (WHNP (WDT that)) (S (X5326 (NP (NN today)) (VP (VBD was) (VP (VBN dedicated) (PP (TO to) (NP (PRP$ <his>) (NNS children)))))) (. .)))))
+
+(S (X5326 (NP (NN Breakfast)) (VP (VBD was) (VP (X1414 (VBD hosted) (PP (IN at) (NP (NNP Kelly) (POS 's)))) (S (NP (NP (NN house)) (PP (IN since) (NP (PRP <she>)))) (VP (VBZ has) (NP (X7248 (X5734 (DT a) (JJ full)) (NN size)) (NN kitchen))))))) (. .))
+
+(S (X5326 (NP (NP (DT The) (NNS zebras)) (PP (IN at) (NP (DT the) (NN zoo)))) (VP (VBD were) (VP (VBG running) (PP (IN around) (NP (PRP$ <their>) (NNS tails)))))) (. .))
+
+(S (X5326 (NP (PRP He)) (VP (X2647 (X1429 (VB cut) (NP (DT the) (NN ribbon))) (PRT (RP off))) (PP (IN of) (NP (NP (PRP$ <his>) (NN present)) (PP (IN from) (NP (NNP Hannah))))))) (. .))
+
+(S (X5326 (NP (NP (X5734 (DT The) (JJ palm)) (NNS trees)) (PP (IN in) (NP (NNP California)))) (VP (VBP are) (VP (VBN known) (PP (IN for) (NP (X6246 (PRP$ their) (JJ long)) (NNS trunks)))))) (. .))
+
+(S (NP (X7482 (DT The) (NNS balls)) (NN trajectory)) (VP (VBD was) (VP (VBD reversed) (SBAR (WHADVP (WRB when)) (S (X5326 (NP (PRP <it>)) (VP (VBD hit) (NP (DT the) (NN wall)))) (. .))))))
+
+(S (X5326 (NP (NNP Jimmy)) (VP (X1473 (VBD threw) (NP (PRP$ <his>) (NNS papers))) (PP (IN out) (NP (DT the) (NN window))))) (. .))
+
+(S (X5326 (NP (NNP Sara)) (VP (VBD was) (VP (VBN confused) (SBAR (WHADVP (WRB when)) (S (NP (PRP$ <her>) (NN package)) (VP (X1473 (VBD came) (NP (DT a) (NN day))) (ADVP (RB early)))))))) (. .))
+
+(S (NP (NNP George)) (VP (VBD was) (VP (VBG looking) (PP (IN for) (NP (NP (PRP$ his) (NN phone)) (SBAR (WHADVP (WRB when)) (S (X5326 (NP (PRP <it>)) (VP (VBD rang))) (. .))))))))
+
+(S (NP (NNS Animals)) (VP (X1744 (VBP are) (ADVP (JJ able))) (VP (TO to) (VP (VB adapt) (SBAR (IN in) (S (X5326 (NP (NN order)) (VP (TO to) (VP (X1429 (VB maximize) (NP (PRP$ <their>) (NNS chances))) (PP (IN of) (NP (NN survival)))))) (. .)))))))
+
+(S (NP (NNP Malcolm)) (VP (VBD needed) (VP (TO to) (VP (X1511 (VB calm) (PRT (RP down))) (NP (X6246 (PRP$ <his>) (JJ sister)) (NN Pam))))))
