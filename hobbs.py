@@ -5,21 +5,26 @@ import sys
 from nltk import Tree
 
 PLURALITY = {
-    "NN":          0,
-    "NNP":         0,
-    "he":          0,
-    "she":         0,
-    "him":         0,
-    "her":         0,
-    "it":          0,
-    "himself":     0,
-    "herself":     0,
-    "itself":      0,
-    "NNS":         1,
-    "NNPS":        1,
-    "they":        1,
-    "them":        1,
-    "themselves":  1,
+    "NN":           0,
+    "NNP":          0,
+    "he":           0,
+    "she":          0,
+    "him":          0,
+    "her":          0,
+    "his":          0,
+    "it":           0,
+    "himself":      None,
+    "herself":      None,
+    "itself":       None,
+    "NNS":          1,
+    "NNPS":         1,
+    "we":           1,
+    "our":          1,
+    "they":         1,
+    "them":         1,
+    "themselves":   1,
+    "their":        1,
+    "PRP":          None
 }
 
 REFLEXIVE = {
@@ -32,6 +37,22 @@ REFLEXIVE = {
     'yourself', 
     'yourselves'
 }
+
+names_f = set()
+names_m = set()
+
+def load_names(path):
+    global names_f
+    global names_m
+
+    with open(path, 'rb') as f:
+        names = json.load(f)
+    
+    for n in names:
+        names_f.add(n.lower())
+
+    for n in names:
+        names_m.add(n.lower())
 
 def is_np_or_s(tree: Tree):
     ''' Checks if a node is represents an NP or S '''
@@ -107,14 +128,14 @@ def _check_plurality(tree, pos, pn) -> bool:
     ''' Checks whether a proposed antecedent matches the plurality of the pronoun '''
     for c in tree[pos]:
         if isinstance(c, Tree) and is_nominal(c):
-            if PLURALITY.get(c.label(), -1) == PLURALITY.get(pn, -2):
+            if PLURALITY[c.label()] == PLURALITY[pn]:
                 return True
     return False
 
 def _check_gender(tree, pos, pn) -> bool:
     ''' Checks whether a proposed antecedent matches the gender of the pronoun '''
-    with open('names.json', 'rb') as f:
-        names = json.load(f)
+    global names_f
+    global names_m
 
     male = ['he', 'him', 'himself']
     female = ['she', 'her', 'herself']
@@ -122,16 +143,16 @@ def _check_gender(tree, pos, pn) -> bool:
 
     for c in tree[pos]:
         if isinstance(c, Tree) and is_nominal(c):
-            c_leaf = c.leaves()[0]
+            c_leaf = c.leaves()[0].lower()
 
             # check male name <-> female pronoun
-            if c_leaf.lower() in names['male'] and c_leaf.lower() not in names['female']:
-                if pn in female:
+            if c_leaf in names_m and c_leaf not in names_f:
+                if pn in female or pn in inanimate:
                     return False
                 
             # check female name <-> male pronoun
-            if c_leaf.lower() in names['female'] and c_leaf.lower() not in names['male']:
-                if pn in male:
+            if c_leaf in names_f and c_leaf not in names_m:
+                if pn in male or pn in inanimate:
                     return False
                 
     return True
@@ -146,7 +167,7 @@ def resolve_reflexive(tree: 'list[Tree]', pos: tuple, pn: str):
         path = path + new_path
 
     # search to left of path
-    nodes = bfs(tree, x, 0)
+    nodes = bfs(tree, x)
     while not nodes.empty():
         node_p = nodes.get()
         
@@ -272,6 +293,8 @@ def main(tests):
         pretty_print(tts, tp, t, p)
 
 if __name__ == '__main__':
+    load_names('new_names.json')
+
     data_path = sys.argv[1]
 
     with open(data_path, 'r') as f:
